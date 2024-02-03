@@ -8,6 +8,7 @@ struct SignUpView: View {
 
     var body: some View {
         VStack {
+            Text("アカウント作成").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             TextField("Email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .autocapitalization(.none)

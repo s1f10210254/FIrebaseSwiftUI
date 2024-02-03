@@ -1,6 +1,6 @@
 import SwiftUI
 import FirebaseAuth
-import FirebaseDatabase
+//import FirebaseDatabase
 
 class AuthViewModel: ObservableObject{
     @Published var isUserAuthenticated: AuthStatus = .undefined
@@ -52,28 +52,5 @@ class AuthViewModel: ObservableObject{
             print("ログアウトエラー:\(signOutError)")
         }
     }
-
-
-    // プロフィールの完了状態を確認するメソッド
-//        func checkUserProfileCompletion() {
-//            guard let uid = Auth.auth().currentUser?.uid else {
-//                self.profileCompleted = false
-//                return
-//            }
-//
-//            let ref = Database.database(url: "https://fir-swiftui-7c6f6-default-rtdb.asia-southeast1.firebasedatabase.app").reference().child("users").child(uid)
-//            ref.observeSingleEvent(of: .value, with: { snapshot in
-//                if let value = snapshot.value as? [String: Any],
-//                   let _ = value["profileCompleted"] as? Bool {
-//                    // 仮に `profileCompleted` がユーザーデータに存在する場合
-//                    self.profileCompleted = true
-//                } else {
-//                    self.profileCompleted = false
-//                }
-//            }) { error in
-//                print(error.localizedDescription)
-//                self.profileCompleted = false
-//            }
-//        }
 
 }

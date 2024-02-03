@@ -1,8 +1,7 @@
-//
-//  SystemView.swift
-//  FIrebaseSwiftUI
-//
-//  Created by Hiroki on 2024/02/03.
-//
+import SwiftUI
 
-import Foundation
+struct SystemView: View {
+    var body: some View {
+        Text("System View").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+    }
+}

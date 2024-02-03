@@ -1,8 +1,7 @@
-//
-//  MapView.swift
-//  FIrebaseSwiftUI
-//
-//  Created by Hiroki on 2024/02/03.
-//
-
-import Foundation
+import SwiftUI
+import MapKit
+struct MapView: View {
+    var body: some View {
+        Map()
+    }
+}

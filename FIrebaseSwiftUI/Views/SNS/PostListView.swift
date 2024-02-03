@@ -1,8 +1,22 @@
-//
-//  PostListView.swift
-//  FIrebaseSwiftUI
-//
-//  Created by Hiroki on 2024/02/03.
-//
+import SwiftUI
+import Firebase
 
-import Foundation
+struct PostListView: View{
+    @ObservedObject var viewModel = PostsViewModel()
+    
+    var body: some View{
+        List(viewModel.posts){ post in
+            VStack(alignment: .leading){
+                Text(post.content)
+                    .padding()
+                Text("Posted by \(post.userID)")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+            }
+            
+        }
+        .onAppear(){
+            self.viewModel.fetchPosts()
+        }
+    }
+}

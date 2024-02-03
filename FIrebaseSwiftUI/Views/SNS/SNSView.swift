@@ -1,8 +1,14 @@
-//
-//  SNSView.swift
-//  FIrebaseSwiftUI
-//
-//  Created by Hiroki on 2024/02/03.
-//
+import SwiftUI
 
-import Foundation
+struct SNSView: View {
+    @StateObject var postViewModel = PostsViewModel()
+
+    var body: some View {
+        VStack{
+            CreatePostView(viewModel: postViewModel)
+            PostListView(viewModel: postViewModel)
+        }
+
+    }
+}
+

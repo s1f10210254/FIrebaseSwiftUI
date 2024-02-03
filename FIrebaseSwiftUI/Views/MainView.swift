@@ -1,14 +1,12 @@
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var authViewModel: AuthViewModel
+//    @EnvironmentObject var authViewModel: AuthViewModel
+    @State private var selection = 1 
+
     var body: some View {
-        Spacer()
-        Text("MainView").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-        Spacer()
-        Button("ログアウト"){
-            authViewModel.signOut()
-        }
+        TopBarView(selection: selection)
+        TabPageView(selection: $selection)
     }
 }
 

@@ -1,8 +1,14 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
     var body: some View {
-        Text("MainView")
+        Spacer()
+        Text("MainView").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+        Spacer()
+        Button("ログアウト"){
+            authViewModel.signOut()
+        }
     }
 }
 

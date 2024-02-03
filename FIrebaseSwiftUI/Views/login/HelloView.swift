@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HelloView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
     var body: some View {
         NavigationView {
             VStack {
@@ -47,10 +48,10 @@ struct HelloView: View {
 
 
 
-struct HelloPage_Previews: PreviewProvider {
-    static var previews: some View {
-        HelloView()
-    }
-}
+//struct HelloPage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HelloView()
+//    }
+//}
 
 

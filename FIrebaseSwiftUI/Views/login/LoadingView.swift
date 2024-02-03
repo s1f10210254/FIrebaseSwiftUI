@@ -1,8 +1,11 @@
-//
-//  LoadingView.swift
-//  FIrebaseSwiftUI
-//
-//  Created by Hiroki on 2024/02/03.
-//
+import SwiftUI
 
-import Foundation
+struct LoadingView: View {
+    var body: some View {
+        VStack {
+            ProgressView("Loading...")
+                .scaleEffect(2.0)
+        }
+    }
+}
+

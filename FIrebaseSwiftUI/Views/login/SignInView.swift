@@ -39,6 +39,9 @@ struct SignInView: View {
                 self.errorMessage = error.localizedDescription
             } else {
                 // サインイン成功時の処理（例：メインビューへの遷移）
+                if(authViewModel.profileCompleted){
+
+                }
             }
         }
     }

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct UserProfileView: View{
     @EnvironmentObject var userViewModel: UserViewModel
-    
+
     var body: some View{
         VStack{
             if let profilePictureURL = userViewModel.currentUser?.profilePictureURL, let url = URL(string: profilePictureURL){
@@ -22,6 +22,11 @@ struct UserProfileView: View{
             }
             if let username = userViewModel.currentUser?.username{
                 Text(username).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            }
+
+            NavigationView {
+                UserProfileEditView()
+                    .environmentObject(userViewModel) // UserViewModelを提供
             }
         }
         .onAppear{

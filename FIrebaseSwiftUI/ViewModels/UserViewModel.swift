@@ -4,12 +4,12 @@ import FirebaseFirestore
 class UserViewModel: ObservableObject{
     var authViewModel: AuthViewModel?
     @Published var currentUser: User?
-    
+
     func registerUser(username: String, profilePictureURL: String){
         guard let userID = Auth.auth().currentUser?.uid else { return }
-        
+
         let user = User(id: userID, username: username, profilePictureURL: profilePictureURL.isEmpty ? nil : profilePictureURL)
-        
+
         do {
             try Firestore.firestore().collection("users").document(userID).setData(from: user)
             DispatchQueue.main.async{
@@ -19,10 +19,10 @@ class UserViewModel: ObservableObject{
             print(error.localizedDescription)
         }
     }
-    
+
     func fetchCurrentUserProfile(){
         guard let userID = Auth.auth().currentUser?.uid else { return }
-        
+
         let userRef = Firestore.firestore().collection("users").document(userID)
         userRef.getDocument { (document, error) in
             if let document = document, document.exists{
@@ -36,6 +36,25 @@ class UserViewModel: ObservableObject{
                 }
             }else{
                 print("User document does not exist")
+            }
+        }
+    }
+
+    func updateUserProfile(username: String, profilePictureURL: String){
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+
+        let userRef = Firestore.firestore().collection("users").document(userID)
+        userRef.updateData([
+            "username": username,
+            "profilePicureURL": profilePictureURL
+        ]) { [weak self] error in
+            if let error = error {
+                print("Error updating user: \(error.localizedDescription)")
+            }else{
+                DispatchQueue.main.async {
+                    self?.currentUser?.username = username
+                    self?.currentUser?.profilePictureURL = profilePictureURL
+                }
             }
         }
     }

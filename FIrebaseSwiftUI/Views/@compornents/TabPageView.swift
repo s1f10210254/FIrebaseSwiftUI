@@ -13,14 +13,15 @@ struct TabPageView: View{
                 .tabItem {
                     Label("SNS", systemImage: "globe")
                 }.tag(2)
-            SystemView()
-                .tabItem {
-                    Label("System", systemImage: "gearshape")
-                }.tag(3)
             UserProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle") // プロフィール用のラベルとアイコンを設定
+                }.tag(3)
+            SystemView()
+                .tabItem {
+                    Label("System", systemImage: "gearshape")
                 }.tag(4)
+
         }
         .environmentObject(userViewModel)
     }

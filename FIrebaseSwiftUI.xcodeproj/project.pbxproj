@@ -10,6 +10,7 @@
 		F53CFB0F2B6F6B4D00A5F519 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CFB0E2B6F6B4D00A5F519 /* UserViewModel.swift */; };
 		F53CFB112B6F6BB600A5F519 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CFB102B6F6BB600A5F519 /* UserModel.swift */; };
 		F53CFB142B6F720B00A5F519 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CFB132B6F720B00A5F519 /* UserProfileView.swift */; };
+		F53CFB162B6F7B9900A5F519 /* UserProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CFB152B6F7B9900A5F519 /* UserProfileEditView.swift */; };
 		F569F3F02B6DD14C0068B84B /* FIrebaseSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569F3EF2B6DD14C0068B84B /* FIrebaseSwiftUIApp.swift */; };
 		F569F3F22B6DD14C0068B84B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569F3F12B6DD14C0068B84B /* ContentView.swift */; };
 		F569F3F42B6DD14D0068B84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F569F3F32B6DD14D0068B84B /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		F53CFB0E2B6F6B4D00A5F519 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		F53CFB102B6F6BB600A5F519 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F53CFB132B6F720B00A5F519 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		F53CFB152B6F7B9900A5F519 /* UserProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEditView.swift; sourceTree = "<group>"; };
 		F569F3EC2B6DD14C0068B84B /* FIrebaseSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIrebaseSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F569F3EF2B6DD14C0068B84B /* FIrebaseSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseSwiftUIApp.swift; sourceTree = "<group>"; };
 		F569F3F12B6DD14C0068B84B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F53CFB132B6F720B00A5F519 /* UserProfileView.swift */,
+				F53CFB152B6F7B9900A5F519 /* UserProfileEditView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				F569F43E2B6E27F40068B84B /* SystemView.swift in Sources */,
 				F569F43A2B6E26D50068B84B /* MapView.swift in Sources */,
 				F569F4232B6DD8430068B84B /* SignInView.swift in Sources */,
+				F53CFB162B6F7B9900A5F519 /* UserProfileEditView.swift in Sources */,
 				F569F3F22B6DD14C0068B84B /* ContentView.swift in Sources */,
 				F569F42F2B6DDD810068B84B /* AuthViewModel.swift in Sources */,
 				F569F4292B6DD87B0068B84B /* HelloView.swift in Sources */,

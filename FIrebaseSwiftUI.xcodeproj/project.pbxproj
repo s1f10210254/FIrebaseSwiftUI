@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F53CFB0F2B6F6B4D00A5F519 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CFB0E2B6F6B4D00A5F519 /* UserViewModel.swift */; };
+		F53CFB112B6F6BB600A5F519 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CFB102B6F6BB600A5F519 /* UserModel.swift */; };
+		F53CFB142B6F720B00A5F519 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CFB132B6F720B00A5F519 /* UserProfileView.swift */; };
 		F569F3F02B6DD14C0068B84B /* FIrebaseSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569F3EF2B6DD14C0068B84B /* FIrebaseSwiftUIApp.swift */; };
 		F569F3F22B6DD14C0068B84B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569F3F12B6DD14C0068B84B /* ContentView.swift */; };
 		F569F3F42B6DD14D0068B84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F569F3F32B6DD14D0068B84B /* Assets.xcassets */; };
@@ -53,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F53CFB0E2B6F6B4D00A5F519 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		F53CFB102B6F6BB600A5F519 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F53CFB132B6F720B00A5F519 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		F569F3EC2B6DD14C0068B84B /* FIrebaseSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIrebaseSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F569F3EF2B6DD14C0068B84B /* FIrebaseSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseSwiftUIApp.swift; sourceTree = "<group>"; };
 		F569F3F12B6DD14C0068B84B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F53CFB122B6F71F200A5F519 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F53CFB132B6F720B00A5F519 /* UserProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		F569F3E32B6DD14C0068B84B = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +186,7 @@
 		F569F4192B6DD1610068B84B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F53CFB122B6F71F200A5F519 /* Profile */,
 				F569F43F2B6E2C690068B84B /* SNS */,
 				F569F43C2B6E27E40068B84B /* System */,
 				F569F43B2B6E27290068B84B /* AR */,
@@ -199,6 +214,7 @@
 		F569F42C2B6DDC500068B84B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F53CFB102B6F6BB600A5F519 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +224,7 @@
 			children = (
 				F569F42E2B6DDD810068B84B /* AuthViewModel.swift */,
 				F569F4472B6E35A60068B84B /* PostsVIewModel.swift */,
+				F53CFB0E2B6F6B4D00A5F519 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -407,6 +424,7 @@
 				F569F42B2B6DDAD60068B84B /* MainView.swift in Sources */,
 				F569F4432B6E2DEC0068B84B /* TopBarView.swift in Sources */,
 				F569F4452B6E35250068B84B /* CreatePostView.swift in Sources */,
+				F53CFB0F2B6F6B4D00A5F519 /* UserViewModel.swift in Sources */,
 				F569F43E2B6E27F40068B84B /* SystemView.swift in Sources */,
 				F569F43A2B6E26D50068B84B /* MapView.swift in Sources */,
 				F569F4232B6DD8430068B84B /* SignInView.swift in Sources */,
@@ -414,6 +432,8 @@
 				F569F42F2B6DDD810068B84B /* AuthViewModel.swift in Sources */,
 				F569F4292B6DD87B0068B84B /* HelloView.swift in Sources */,
 				F569F44E2B6E4D1A0068B84B /* PostListView.swift in Sources */,
+				F53CFB142B6F720B00A5F519 /* UserProfileView.swift in Sources */,
+				F53CFB112B6F6BB600A5F519 /* UserModel.swift in Sources */,
 				F569F4272B6DD85D0068B84B /* ProfileSetUpView.swift in Sources */,
 				F569F3F02B6DD14C0068B84B /* FIrebaseSwiftUIApp.swift in Sources */,
 				F569F4342B6E072C0068B84B /* LoadingView.swift in Sources */,

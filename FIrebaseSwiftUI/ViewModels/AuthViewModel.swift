@@ -1,6 +1,6 @@
 import SwiftUI
 import FirebaseAuth
-//import FirebaseDatabase
+import FirebaseFirestore
 
 class AuthViewModel: ObservableObject{
     @Published var isUserAuthenticated: AuthStatus = .undefined
@@ -14,10 +14,23 @@ class AuthViewModel: ObservableObject{
 
     init(){
         authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener{ _, user in
-            if let _ =  user {
+            if let user = user {
                 self.isUserAuthenticated = .signedIn
+                // プロフィールの完了状態を確認
+                self.checkUserProfileCompletion(userId: user.uid)
             }else{
                 self.isUserAuthenticated = .signedOut
+                self.profileCompleted = false
+            }
+        }
+    }
+
+    func checkUserProfileCompletion(userId: String){
+        Firestore.firestore().collection("users").document(userId).getDocument { document, error in
+            if let document = document, document.exists{
+                self.profileCompleted = true
+            } else{
+                self.profileCompleted  = false
             }
         }
     }

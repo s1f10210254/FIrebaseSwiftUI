@@ -1,8 +1,7 @@
-//
-//  UserModel.swift
-//  FIrebaseSwiftUI
-//
-//  Created by Hiroki on 2024/02/04.
-//
+import SwiftUI
 
-import Foundation
+struct User: Identifiable, Codable{
+    var id: String = UUID().uuidString
+    var username: String
+    var profilePictureURL: String?
+}

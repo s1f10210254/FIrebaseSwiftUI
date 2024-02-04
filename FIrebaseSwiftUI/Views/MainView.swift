@@ -1,12 +1,13 @@
 import SwiftUI
 
 struct MainView: View {
-//    @EnvironmentObject var authViewModel: AuthViewModel
-    @State private var selection = 1 
+    @StateObject var userViewModel = UserViewModel()
+    @State private var selection = 1
 
     var body: some View {
         TopBarView(selection: selection)
         TabPageView(selection: $selection)
+            .environmentObject(userViewModel)
     }
 }
 
